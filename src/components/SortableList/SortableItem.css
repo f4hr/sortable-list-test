@@ -1,4 +1,5 @@
 .sortable-list__item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,4 +25,40 @@
 
 .sortable-list__item--type--warn {
   background-color: #ffcd6e;
+}
+
+.sortable-list__remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sortable-list__remove-btn:hover {
+  transform: scale(1.25);
+}
+
+.sortable-list__remove-btn::before,
+.sortable-list__remove-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.sortable-list__remove-btn::before {
+  transform: translateY(8px) rotateZ(45deg);
+}
+
+.sortable-list__remove-btn::after {
+  transform: translateY(8px) rotateZ(-45deg);
 }

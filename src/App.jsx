@@ -28,6 +28,10 @@ export function App() {
   const [form1State, setForm1State] = useState({ firstName: '', lastName: '' });
   const [form2State, setForm2State] = useState({ country: '', city: '' });
 
+  const handleRemove = (id) => {
+    setTargetList((prev) => prev.filter((item) => item.id !== id));
+  };
+
   const getCurrentScreen = (screen) => {
     switch (screen) {
       case 1:
@@ -37,6 +41,7 @@ export function App() {
             setSourceList={setSourceList}
             targetList={targetList}
             setTargetList={setTargetList}
+            onRemove={handleRemove}
           />
         );
       case 2:

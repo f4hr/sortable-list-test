@@ -9,7 +9,7 @@ import { SortableItem } from './SortableItem';
 import { getNextId } from '../utils';
 
 export function SortableList({
-  sourceList, setSourceList, targetList, setTargetList,
+  sourceList, setSourceList, targetList, setTargetList, onRemove,
 }) {
   return (
     <>
@@ -38,7 +38,7 @@ export function SortableList({
           group={{ name: 'group-name', pull: 'clone' }}
         >
           {targetList.map((item) => (
-            <SortableItem key={item.id} item={item} />
+            <SortableItem key={item.id} item={item} onRemove={onRemove} />
           ))}
         </ReactSortable>
       </div>

@@ -2,3 +2,7 @@
   flex-grow: 1;
   padding-left: 1rem;
 }
+
+.sortable-list__list {
+  min-height: 50vh;
+}
