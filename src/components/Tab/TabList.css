@@ -1,0 +1,6 @@
+.tab__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
